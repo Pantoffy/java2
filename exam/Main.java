@@ -21,6 +21,23 @@ public class Main {
             String value = entry.getValue();
             System.err.println("Value with key = " + key + " is  : " + value);
         }
+        private static void addCustomer(Scanner scanner, CRMHashMap crm) {
+        System.out.print("Enter customer name: ");
+        String name = scanner.nextLine();
+        System.out.print("Enter customer email: ");
+        String email = scanner.nextLine();
+        System.out.print("Enter customer phone: ");
+        String phone = scanner.nextLine();
+
+        crm.addCustomer(name, email, phone);
+        System.out.println("Customer added!");
+    }
+
+    private static void findCustomer(Scanner scanner, CRMHashMap crm) {
+        System.out.print("Enter customer name to find: ");
+        String name = scanner.nextLine();
+        crm.findCustomer(name);
+    }
     }
 }
-//code nay em xem lai bai cu
+
